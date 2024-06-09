@@ -1,0 +1,30 @@
+.event-details {
+    margin-top: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .event-details h2 {
+    margin-top: 20px;
+    color: var(--text-color);
+  }
+  
+  .event-details p {
+    margin: 5px 0;
+    color: var(--text-color);
+  }
+  
+  body.dark-mode .event-details {
+    background-color: var(--secondary-background-color);
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  }
+  
+  body.dark-mode .event-details h2,
+  body.dark-mode .event-details p {
+    color: var(--text-color);
+  }
+  
