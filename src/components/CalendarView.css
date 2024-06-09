@@ -1,48 +1,59 @@
 /* src/components/CalendarView.css */
+
 .calendar-container {
-    margin: 20px auto;
-    max-width: 900px;
-  }
-  
-  .rbc-calendar {
-    background-color: var(--background-color);
-    color: var(--text-color);
-  }
-  
-  .rbc-toolbar {
-    background-color: var(--background-color);
-    color: var(--text-color);
-  }
-  
-  .rbc-event {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-  }
-  
-  .rbc-day-bg {
-    background-color: var(--background-color);
-  }
-  
-  .rbc-day-bg:not(.rbc-off-range-bg) {
-    background-color: var(--highlight-background-color);
-  }
-  
-  .rbc-off-range-bg {
-    background-color: var(--off-range-color);
-  }
-  
-  .rbc-date-cell {
-    color: var(--text-color);
-  }
-  
-  body.dark-mode .rbc-off-range-bg {
-    background-color: var(--off-range-color);
-  }
-  
-  body.dark-mode .rbc-day-bg:not(.rbc-off-range-bg) {
-    background-color: var(--highlight-background-color);
-  }
-  
-  body.dark-mode .rbc-date-cell {
-    color: var(--text-color);
-  }
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.rbc-calendar {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.rbc-toolbar {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.rbc-event {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.rbc-day-bg {
+  background-color: var(--background-color);
+}
+
+.rbc-day-bg:not(.rbc-off-range-bg) {
+  background-color: var(--highlight-background-color);
+}
+
+.rbc-off-range-bg {
+  background-color: var(--off-range-color);
+}
+
+.rbc-date-cell {
+  color: var(--text-color);
+}
+
+.current-day-highlight {
+  background-color: #00b4d8 !important; /* Cambia esto al color que prefieras */
+  color: #ffffff !important; /* Asegúrate de que el texto sea legible */
+}
+
+body.dark-mode .current-day-highlight {
+  background-color: #415a77 !important; /* Color de fondo para el día actual en modo oscuro */
+  color: #e0e1dd !important; /* Asegúrate de que el texto sea legible */
+}
+
+body.dark-mode .rbc-off-range-bg {
+  background-color: var(--off-range-color);
+}
+
+body.dark-mode .rbc-day-bg:not(.rbc-off-range-bg) {
+  background-color: var(--highlight-background-color);
+}
+
+body.dark-mode .rbc-date-cell {
+  color: var(--text-color);
+}

@@ -14,6 +14,15 @@ moment.updateLocale('en', {
 });
 
 const CalendarView = ({ events, onSelectEvent }) => {
+  const dayPropGetter = (date) => {
+    if (moment(date).isSame(moment(), 'day')) {
+      return {
+        className: 'current-day-highlight',
+      };
+    }
+    return {};
+  };
+
   return (
     <div className="calendar-container">
       <Calendar
@@ -23,8 +32,9 @@ const CalendarView = ({ events, onSelectEvent }) => {
         endAccessor="end"
         style={{ height: 500 }}
         onSelectEvent={onSelectEvent}
-        views={['month', 'agenda']} //si borres aixo pots veure setmana i/o dia complet.
+        views={['month', 'agenda']}
         defaultView="month"
+        dayPropGetter={dayPropGetter}
       />
     </div>
   );

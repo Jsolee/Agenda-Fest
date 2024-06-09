@@ -5,6 +5,7 @@
   --highlight-background-color: #00b4d8; /* Fondo resaltado */
   --primary-color: #0077b6; /* Color primario */
   --text-color: #03045e; /* Texto */
+  --current-day-color: #0077b6; /* Color para el día actual en modo claro */
 }
 
 body {
@@ -20,6 +21,7 @@ body.dark-mode {
   --secondary-background-color: #415a77;
   --highlight-background-color: #1b263b;
   --off-range-color: #5a5a5a;
+  --current-day-color: #415a77; /* Color para el día actual en modo oscuro */
 }
 
 .App {
@@ -126,4 +128,9 @@ body.dark-mode .rbc-day-bg:not(.rbc-off-range-bg) {
 
 body.dark-mode .rbc-date-cell {
   color: var(--text-color);
+}
+
+.current-day-highlight {
+  background-color: var(--current-day-color) !important; /* Usar la variable definida para el color del día actual */
+  color: #ffffff !important; /* Asegúrate de que el texto sea legible */
 }
