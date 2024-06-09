@@ -1,0 +1,48 @@
+/* src/components/CalendarView.css */
+.calendar-container {
+    margin: 20px auto;
+    max-width: 900px;
+  }
+  
+  .rbc-calendar {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .rbc-toolbar {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .rbc-event {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+  }
+  
+  .rbc-day-bg {
+    background-color: var(--background-color);
+  }
+  
+  .rbc-day-bg:not(.rbc-off-range-bg) {
+    background-color: var(--highlight-background-color);
+  }
+  
+  .rbc-off-range-bg {
+    background-color: var(--off-range-color);
+  }
+  
+  .rbc-date-cell {
+    color: var(--text-color);
+  }
+  
+  body.dark-mode .rbc-off-range-bg {
+    background-color: var(--off-range-color);
+  }
+  
+  body.dark-mode .rbc-day-bg:not(.rbc-off-range-bg) {
+    background-color: var(--highlight-background-color);
+  }
+  
+  body.dark-mode .rbc-date-cell {
+    color: var(--text-color);
+  }

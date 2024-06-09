@@ -1,0 +1,129 @@
+/* src/App.css */
+:root {
+  --background-color: #caf0f8; /* Fondo */
+  --secondary-background-color: #90e0ef; /* Fondo secundario */
+  --highlight-background-color: #00b4d8; /* Fondo resaltado */
+  --primary-color: #0077b6; /* Color primario */
+  --text-color: #03045e; /* Texto */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  --background-color: #0d1b2a;
+  --text-color: #e0e1dd;
+  --primary-color: #778da9;
+  --secondary-background-color: #415a77;
+  --highlight-background-color: #1b263b;
+  --off-range-color: #5a5a5a;
+}
+
+.App {
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  color: var(--text-color);
+}
+
+.event-details {
+  margin-top: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .event-details {
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Toggle Switch Styles */
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--secondary-background-color);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--text-color);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Calendar Styles */
+.rbc-calendar {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.rbc-toolbar {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.rbc-event {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.rbc-day-bg {
+  background-color: var(--background-color);
+}
+
+.rbc-day-bg:not(.rbc-off-range-bg) {
+  background-color: var(--highlight-background-color);
+}
+
+body.dark-mode .rbc-off-range-bg {
+  background-color: var(--off-range-color);
+}
+
+body.dark-mode .rbc-day-bg:not(.rbc-off-range-bg) {
+  background-color: var(--highlight-background-color);
+}
+
+body.dark-mode .rbc-date-cell {
+  color: var(--text-color);
+}

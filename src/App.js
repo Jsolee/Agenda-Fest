@@ -1,0 +1,33 @@
+// src/App.js
+import React, { useState, useEffect } from 'react';
+import CalendarView from './components/CalendarView';
+import EventDetails from './components/EventDetails';
+import ThemeToggle from './components/ThemeToggle';
+import { getEvents } from './services/dataService';
+import './App.css';
+
+const App = () => {
+  const [events, setEvents] = useState([]);
+  const [selectedEvent, setSelectedEvent] = useState(null);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    setEvents(getEvents());
+  }, []);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle('dark-mode', !isDarkMode);
+  };
+
+  return (
+    <div className="App">
+      <ThemeToggle toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+      <h1>Calendari de Festes</h1>
+      <CalendarView events={events} onSelectEvent={setSelectedEvent} />
+      <EventDetails event={selectedEvent} />
+    </div>
+  );
+};
+
+export default App;
