@@ -1,4 +1,3 @@
-// src/components/CalendarView.js
 import React from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
@@ -14,8 +13,18 @@ moment.updateLocale('en', {
 });
 
 const CalendarView = ({ events, onSelectEvent }) => {
-  const dayPropGetter = (date) => {
-    if (moment(date).isSame(moment(), 'day')) {
+  const customEventPropGetter = (event) => {
+    const backgroundColor = event.color || '#0077b6';
+    return { style: { backgroundColor } };
+  };
+
+  const customDayPropGetter = (date) => {
+    const today = new Date();
+    if (
+      date.getDate() === today.getDate() &&
+      date.getMonth() === today.getMonth() &&
+      date.getFullYear() === today.getFullYear()
+    ) {
       return {
         className: 'current-day-highlight',
       };
@@ -23,20 +32,65 @@ const CalendarView = ({ events, onSelectEvent }) => {
     return {};
   };
 
+  const groupedEvents = events.reduce((acc, event) => {
+    const date = moment(event.start).startOf('day').toDate();
+    if (!acc[date]) {
+      acc[date] = [];
+    }
+    acc[date].push(event);
+    return acc;
+  }, {});
+
+  const newEvents = Object.keys(groupedEvents).flatMap((date) => {
+    const eventsOnDate = groupedEvents[date];
+    if (eventsOnDate.length > 2) {
+      return {
+        title: `${eventsOnDate.length} eventos`,
+        start: new Date(date),
+        end: new Date(date),
+        allDay: true,
+        events: eventsOnDate,
+      };
+    }
+    return eventsOnDate.map(event => ({
+      ...event,
+      start: new Date(date),
+      end: new Date(date),
+      allDay: true,
+    }));
+  });
+
+  const handleSelectEvent = (event) => {
+    if (event.events) {
+      onSelectEvent(event.events);
+    } else {
+      onSelectEvent([event]);
+    }
+  };
+
   return (
-    <div className="calendar-container">
-      <Calendar
-        localizer={localizer}
-        events={events}
-        startAccessor="start"
-        endAccessor="end"
-        style={{ height: 500 }}
-        onSelectEvent={onSelectEvent}
-        views={['month', 'agenda']}
-        defaultView="month"
-        dayPropGetter={dayPropGetter}
-      />
-    </div>
+    <Calendar
+      localizer={localizer}
+      events={newEvents}
+      startAccessor="start"
+      endAccessor="end"
+      style={{ height: 500 }}
+      onSelectEvent={handleSelectEvent}
+      eventPropGetter={customEventPropGetter}
+      dayPropGetter={customDayPropGetter}
+      views={['month', 'agenda']}
+      defaultView="month"
+      messages={{
+        agenda: 'Agenda',
+        month: 'Mes',
+        day: 'Día',
+        date: 'Fecha',
+        time: 'Hora',
+        event: 'Evento',
+        noEventsInRange: 'No hay eventos en este rango.',
+        showMore: (total) => `+ Ver más (${total})`,
+      }}
+    />
   );
 };
 

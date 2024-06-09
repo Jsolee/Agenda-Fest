@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState, useEffect } from 'react';
 import CalendarView from './components/CalendarView';
 import EventDetails from './components/EventDetails';
@@ -8,7 +7,7 @@ import './App.css';
 
 const App = () => {
   const [events, setEvents] = useState([]);
-  const [selectedEvent, setSelectedEvent] = useState(null);
+  const [selectedEvents, setSelectedEvents] = useState([]);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -24,8 +23,8 @@ const App = () => {
     <div className="App">
       <ThemeToggle toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
       <h1>Calendari de Festes</h1>
-      <CalendarView events={events} onSelectEvent={setSelectedEvent} />
-      <EventDetails event={selectedEvent} />
+      <CalendarView events={events} onSelectEvent={setSelectedEvents} />
+      <EventDetails event={selectedEvents} />
     </div>
   );
 };

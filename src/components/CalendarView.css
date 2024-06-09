@@ -57,3 +57,11 @@ body.dark-mode .rbc-day-bg:not(.rbc-off-range-bg) {
 body.dark-mode .rbc-date-cell {
   color: var(--text-color);
 }
+
+.today {
+  background-color: var(--highlight-background-color) !important;
+}
+
+body.dark-mode .today {
+  background-color: var(--primary-color) !important;
+}

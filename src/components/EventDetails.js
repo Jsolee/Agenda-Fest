@@ -1,17 +1,21 @@
-// src/components/EventDetails.js
 import React from 'react';
+import './EventDetails.css';
 
 const EventDetails = ({ event }) => {
-  if (!event) {
-    return <div>Selecciona una festa per veure els detalls.</div>;
+  if (!event || event.length === 0) {
+    return <div className="event-details">Selecciona un evento para ver los detalles.</div>;
   }
 
   return (
-    <div>
-      <h2>{event.title}</h2>
-      <p><strong>Data:</strong> {event.start.toLocaleDateString()}</p>
-      <p><strong>Ubicació:</strong> {event.location}</p>
-      <p><strong>Descripció:</strong> {event.description}</p>
+    <div className="event-details">
+      {event.map((evt, index) => (
+        <div key={index}>
+          <h2>{evt.title}</h2>
+          <p><strong>Fecha:</strong> {new Date(evt.start).toLocaleDateString()}</p>
+          <p><strong>Ubicación:</strong> {evt.location}</p>
+          <p><strong>Descripción:</strong> {evt.description}</p>
+        </div>
+      ))}
     </div>
   );
 };
