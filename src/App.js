@@ -22,7 +22,7 @@ const App = () => {
   return (
     <div className="App">
       <ThemeToggle toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
-      <h1>Calendari de Festes</h1>
+      <h1>Agenda Fest</h1>
       <CalendarView events={events} onSelectEvent={setSelectedEvents} />
       <EventDetails event={selectedEvents} />
     </div>

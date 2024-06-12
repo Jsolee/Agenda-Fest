@@ -43,7 +43,7 @@ const CalendarView = ({ events, onSelectEvent }) => {
 
   const newEvents = Object.keys(groupedEvents).flatMap((date) => {
     const eventsOnDate = groupedEvents[date];
-    if (eventsOnDate.length > 2) {
+    if (Calendar.views === 'month' && eventsOnDate.length > 2) {
       return {
         title: `${eventsOnDate.length} eventos`,
         start: new Date(date),
@@ -54,9 +54,9 @@ const CalendarView = ({ events, onSelectEvent }) => {
     }
     return eventsOnDate.map(event => ({
       ...event,
-      start: new Date(date),
-      end: new Date(date),
-      allDay: true,
+      start: new Date(event.start),
+      end: new Date(event.end),
+      allDay: false,
     }));
   });
 
@@ -65,6 +65,13 @@ const CalendarView = ({ events, onSelectEvent }) => {
       onSelectEvent(event.events);
     } else {
       onSelectEvent([event]);
+    }
+  };
+
+  const handleShowMore = (date) => {
+    const eventsOnDate = groupedEvents[date];
+    if (eventsOnDate.length > 2) {
+      onSelectEvent(eventsOnDate);
     }
   };
 
@@ -78,17 +85,46 @@ const CalendarView = ({ events, onSelectEvent }) => {
       onSelectEvent={handleSelectEvent}
       eventPropGetter={customEventPropGetter}
       dayPropGetter={customDayPropGetter}
+      //
+      selectable
+      //
       views={['month', 'agenda']}
       defaultView="month"
       messages={{
         agenda: 'Agenda',
         month: 'Mes',
-        day: 'Día',
-        date: 'Fecha',
+        day: 'Dia',
+        date: 'Data',
         time: 'Hora',
-        event: 'Evento',
+        event: 'Event',
         noEventsInRange: 'No hay eventos en este rango.',
         showMore: (total) => `+ Ver más (${total})`,
+      }}
+      components={{
+        agenda: {
+          event: ({ event }) => (
+            <span>
+              {event.title} {event.events ? `(${event.events.length} eventos)` : ''}
+            </span>
+          ),
+          header: ({ date, events }) => (
+            <thead>
+              <tr>
+                <th className="rbc-header">Data</th>
+                <th className="rbc-header">Hora</th>
+                <th className="rbc-header">Event</th>
+              </tr>
+            </thead>
+          ),
+          dateCellWrapper: ({ children, value }) => {
+            const eventsOnDate = groupedEvents[moment(value).startOf('day').toDate().toISOString()];
+            return (
+              <div onClick={() => handleShowMore(moment(value).startOf('day').toDate().toISOString())}>
+                {children}
+              </div>
+            );
+          },
+        },
       }}
     />
   );

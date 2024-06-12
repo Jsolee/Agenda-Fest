@@ -1,49 +1,132 @@
-/* src/components/CalendarView.css */
+:root {
+  --background-color: #caf0f8;
+  --secondary-background-color: #90e0ef;
+  --highlight-background-color: #00b4d8;
+  --primary-color: #0077b6;
+  --text-color: #03045e;
+}
 
-.calendar-container {
-  margin: 20px auto;
-  max-width: 900px;
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  --background-color: #0d1b2a;
+  --text-color: #e0e1dd;
+  --primary-color: #778da9;
+  --secondary-background-color: #415a77;
+  --highlight-background-color: #1b263b;
+  --off-range-color: #5a5a5a;
+}
+
+.App {
+  text-align: center;
+  position: relative;
+  padding: 20px;
+}
+
+h1 {
+  color: var(--text-color);
+}
+
+.event-details {
+  margin-top: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .event-details {
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: relative;
+  cursor: pointer;
+  top: 10;
+  left: 10;
+  right: 10;
+  bottom: 10;
+  background-color: var(--secondary-background-color);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: relative;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--text-color);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
 }
 
 .rbc-calendar {
   background-color: var(--background-color);
   color: var(--text-color);
+  border-radius: 25px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+body.dark-mode .rbc-calendar {
+  box-shadow: 6px 6px 12px rgba(255, 255, 255, 0.2);
 }
 
 .rbc-toolbar {
   background-color: var(--background-color);
   color: var(--text-color);
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .rbc-event {
   background-color: var(--primary-color);
   color: var(--background-color);
+  border-radius: 4px;
+  padding: 2px 4px;
 }
 
 .rbc-day-bg {
   background-color: var(--background-color);
+  border: 1px solid var(--secondary-background-color);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-.rbc-day-bg:not(.rbc-off-range-bg) {
+.rbc-day-bg:hover {
   background-color: var(--highlight-background-color);
-}
-
-.rbc-off-range-bg {
-  background-color: var(--off-range-color);
-}
-
-.rbc-date-cell {
-  color: var(--text-color);
-}
-
-.current-day-highlight {
-  background-color: #00b4d8 !important; /* Cambia esto al color que prefieras */
-  color: #ffffff !important; /* Asegúrate de que el texto sea legible */
-}
-
-body.dark-mode .current-day-highlight {
-  background-color: #415a77 !important; /* Color de fondo para el día actual en modo oscuro */
-  color: #e0e1dd !important; /* Asegúrate de que el texto sea legible */
 }
 
 body.dark-mode .rbc-off-range-bg {
@@ -60,8 +143,43 @@ body.dark-mode .rbc-date-cell {
 
 .today {
   background-color: var(--highlight-background-color) !important;
+  border: 2px solid var(--primary-color) !important;
+  border-radius: 4px;
 }
 
 body.dark-mode .today {
   background-color: var(--primary-color) !important;
+}
+
+body.dark-mode .rbc-date-cell {
+  color: var(--text-color);
+}
+
+body.dark-mode .rbc-agenda-view table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body.dark-mode .rbc-agenda-view th, 
+body.dark-mode .rbc-agenda-view td {
+  padding: 10px;
+  border-bottom: 1px solid var(--secondary-background-color);
+}
+
+body.dark-mode .rbc-agenda-view th {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: left;
+}
+
+body.dark-mode .rbc-agenda-view td {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark-mode .rbc-agenda-view .rbc-agenda-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
