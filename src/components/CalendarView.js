@@ -1,15 +1,21 @@
 import React from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
+import CustomToolbar from './CustomToolbar';
+import 'moment/locale/ca'; // Import Catalan locale
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
-const localizer = momentLocalizer(moment);
+// Set the locale to Catalan
+moment.locale('ca');
 
-moment.updateLocale('en', {
+// Update the week start day if necessary
+moment.updateLocale('ca', {
   week: {
     dow: 1, // Monday is the first day of the week.
   },
 });
+
+const localizer = momentLocalizer(moment);
 
 const CalendarView = ({ events, onSelectEvent }) => {
   const handleSelectEvent = (event) => {
@@ -45,6 +51,18 @@ const CalendarView = ({ events, onSelectEvent }) => {
         onSelectSlot={handleSelectSlot}
         selectable={true}
         dayPropGetter={dayPropGetter}
+        components={{
+          toolbar: CustomToolbar,
+        }}
+        messages={{
+          today: "Actual",
+          next: "Següent", // change to your desired label
+          previous: "Anterior", // change to your desired label
+          month: "Mes", // change to your desired label
+          week: "Setmana",
+          day: "Dia", // change to your desired label
+          agenda: "Agenda", // change to your desired label
+        }}
       />
     </div>
   );

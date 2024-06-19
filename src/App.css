@@ -27,6 +27,9 @@ body.dark-mode {
 .App {
   text-align: center;
   position: relative;
+  padding: 20px;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 h1 {
@@ -38,12 +41,53 @@ h1 {
   background-color: var(--background-color);
   color: var(--text-color);
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 body.dark-mode .event-details {
   box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* For mobile devices */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+
+  .event-details {
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* For tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .App {
+    padding: 15px;
+  }
+
+  .event-details {
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 16px;
+  }
+}
+
+/* For laptops and desktops */
+@media (min-width: 1025px) {
+  .App {
+    padding: 20px;
+  }
+
+  .event-details {
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 18px;
+  }
 }
 
 /* Toggle Switch Styles */
@@ -98,6 +142,10 @@ input:checked + .slider:before {
 .rbc-calendar {
   background-color: var(--background-color);
   color: var(--text-color);
+
+  border-radius: 20px;
+  overflow: hidden; /* This is to ensure the inner calendar respects the border radius */
+  margin-bottom: 20px;
 }
 
 .rbc-toolbar {

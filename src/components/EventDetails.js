@@ -3,7 +3,7 @@ import './EventDetails.css';
 
 const EventDetails = ({ events }) => {
   if (!events || events.length === 0) {
-    return <div className="event-details">Selecciona un día para ver los eventos.</div>;
+    return <div className="event-details">Selecciona un dia per veure els events.</div>;
   }
 
   return (
