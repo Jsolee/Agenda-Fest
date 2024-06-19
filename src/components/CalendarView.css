@@ -183,3 +183,8 @@ body.dark-mode .rbc-agenda-view .rbc-agenda-content {
   flex-direction: column;
   align-items: flex-start;
 }
+
+.current-day-highlight {
+  background-color: var(--current-day-color) !important;
+  color: #ffffff !important;
+}

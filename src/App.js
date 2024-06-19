@@ -24,7 +24,7 @@ const App = () => {
       <ThemeToggle toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
       <h1>Agenda Fest</h1>
       <CalendarView events={events} onSelectEvent={setSelectedEvents} />
-      <EventDetails event={selectedEvents} />
+      <EventDetails events={selectedEvents} />
     </div>
   );
 };
