@@ -11,7 +11,8 @@ const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    setEvents(getEvents());
+    const currentEvents = getEvents().filter(event => new Date(event.end) >= new Date());
+    setEvents(currentEvents);
   }, []);
 
   const toggleTheme = () => {

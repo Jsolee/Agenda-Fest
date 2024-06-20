@@ -1,6 +1,7 @@
 // CustomToolbar.js
 import React from 'react';
 import { Navigate } from 'react-big-calendar';
+import './CustomToolbar.css'
 
 const CustomToolbar = (toolbar) => {
   const goToBack = () => {
@@ -28,16 +29,16 @@ const CustomToolbar = (toolbar) => {
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0px' }}>
       <div>
-        <button style={{ margin: '5px', padding: '10px', borderRadius: '5px', backgroundColor: '#008CBA', color: 'white', border: 'none' }} onClick={goToBack}>Anterior</button>
-        <button style={{ margin: '1px', padding: '10px', borderRadius: '5px', backgroundColor: '#008CBA', color: 'white', border: 'none' }} onClick={goToToday}>Actual</button>
-        <button style={{ margin: '5px', padding: '10px', borderRadius: '5px', backgroundColor: '#008CBA', color: 'white', border: 'none' }} onClick={goToNext}>Següent</button>
+        <button className="toolbar-button" onClick={goToBack}>Anterior</button>
+        <button className="toolbar-button" onClick={goToToday}>Actual</button>
+        <button className="toolbar-button" onClick={goToNext}>Següent</button>
       </div>
       <div>
         <h2>{currentMonthYear}</h2>
       </div>
       <div>
-        <button style={{ margin: '5px', padding: '10px', borderRadius: '5px', backgroundColor: '#008CBA', color: 'white', border: 'none' }} onClick={goToCalendar}>Calendari</button>
-        <button style={{ margin: '5px', padding: '10px', borderRadius: '5px', backgroundColor: '#008CBA', color: 'white', border: 'none' }} onClick={goToAgenda}>Agenda</button>
+        <button className="toolbar-button" onClick={goToCalendar}>Calendari</button>
+        <button className="toolbar-button" onClick={goToAgenda}>Agenda</button>
       </div>
     </div>
   );

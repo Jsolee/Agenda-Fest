@@ -41,18 +41,18 @@
     },
     {
         "id": 6,
-        "title": "FM Empalmada La Pobla de Claramunt",
-        "start": "2024-06-22T23:00:00",
-        "end": "2024-06-22T23:30:00",
-        "location": "La Pobla de Claramunt, Jardí Torresport",
+        "title": "FM Empalmada La Torre de Claramunt",
+        "start": "2024-06-22T00:00:00",
+        "end": "2024-06-22T04:00:00",
+        "location": "La Torre de Claramunt, Jardí Torresport",
         "description": "Nit de l'empalmada amb DJ BAAT b2b DJ LYMO."
     },
     {
         "id": 7,
-        "title": "FM Festa amb DJ La Pobla de Claramunt",
-        "start": "2024-06-23T23:00:00",
-        "end": "2024-06-23T23:30:00",
-        "location": "La Pobla de Claramunt, Jardí Torresport",
+        "title": "FM Festa amb DJ La Torre de Claramunt",
+        "start": "2024-06-23T00:00:00",
+        "end": "2024-06-23T5:30:00",
+        "location": "La Torre de Claramunt, Jardí Torresport",
         "description": "Grup de versions i DJs de Flaix FM."
     },
     {
@@ -70,6 +70,78 @@
         "end": "2024-07-06T06:00:00",
         "location": "Sala Royale, Vilafranca",
         "description": "Royale especial VIJAZZ."
+    },
+    {
+        "id": 10,
+        "title": "FM Sant Cugat Sesgarrigues",
+        "start": "2024-07-27T00:30:00",
+        "end": "2024-07-27T06:00:00",
+        "location": "Sant Cugat Sesgarrigues",
+        "description": "FM grup de banda i despres DJ (pendent de confirmacio data)."
+    },
+    {
+        "id": 11,
+        "title": "FM Santa Margarita i els Monjos",
+        "start": "2024-07-20T00:30:00",
+        "end": "2024-07-20T06:00:00",
+        "location": "Santa Margarita i els Monjos",
+        "description": "FM grup de banda i despres DJ (pendent de confirmacio data)."
+    },
+    {
+        "id": 12,
+        "title": "FM La Llacuna",
+        "start": "2024-08-03T00:30:00",
+        "end": "2024-08-03T06:00:00",
+        "location": "La Llacuna",
+        "description": "FM grup de banda i despres DJ (pendent de confirmacio data)."
+    },
+    {
+        "id": 13,
+        "title": "FM Guardiola de Font-Rubi",
+        "start": "2024-08-17T00:30:00",
+        "end": "2024-08-17T06:00:00",
+        "location": "Guardiola de Font-Rubi",
+        "description": "FM grup de banda i despres DJ (pendent de confirmacio data)."
+    },
+    {
+        "id": 14,
+        "title": "FM Sant Quintí de Mediona",
+        "start": "2024-08-17T00:30:00",
+        "end": "2024-08-17T06:00:00",
+        "location": "Sant Quintí de Mediona",
+        "description": "FM grup de banda i despres DJ (pendent de confirmacio data)."
+    },
+    {
+        "id": 15,
+        "title": "FM Sant Martí Sarroca",
+        "start": "2024-07-13T00:30:00",
+        "end": "2024-07-13T06:00:00",
+        "location": "Sant Martí Sarroca",
+        "description": "FM grup de banda i despres DJ (pendent de confirmacio data)."
+    },
+    {
+        "id": 16,
+        "title": "FM El Pla del Penedes",
+        "start": "2024-07-27T00:30:00",
+        "end": "2024-07-27T06:00:00",
+        "location": "El Pla del Penedes",
+        "description": "FM grup de banda i despres DJ (pendent de confirmacio data)."
+    },
+    {
+        "id": 17,
+        "title": "FM MOJA",
+        "start": "2024-07-26T00:30:00",
+        "end": "2024-07-26T06:00:00",
+        "location": "MOJA (Olèrdola)",
+        "description": "FM grup de banda i despres DJ (pendent de confirmacio data)."
+    },
+    {
+        "id": 18,
+        "title": "FM Vilafranca",
+        "start": "2024-08-31T00:30:00",
+        "end": "2024-08-31T06:00:00",
+        "location": "Vilafranca",
+        "description": "FM grup de banda i despres DJ (pendent de confirmacio data)."
     }
   ]
   
