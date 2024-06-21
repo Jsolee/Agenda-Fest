@@ -18,6 +18,31 @@
     background-color: #005b70;
     box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
   }
+
+  .toolbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .toolbar-side {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Aligns the Anterior button to the left */
+  }
+  
+  .toolbar-side.right {
+    justify-content: flex-end; /* Aligns the Següent button to the right */
+  }
+  
+  .toolbar-middle {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the month and Actual button */
+  }
   
   @media (max-width: 600px) {
     .toolbar-button {

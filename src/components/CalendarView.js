@@ -54,14 +54,15 @@ const CalendarView = ({ events, onSelectEvent }) => {
         components={{
           toolbar: CustomToolbar,
         }}
+        views={['month']}
         messages={{
           today: "Actual",
-          next: "Següent", // change to your desired label
-          previous: "Anterior", // change to your desired label
-          month: "Mes", // change to your desired label
+          next: "Següent",
+          previous: "Anterior",
+          month: "Mes",
           week: "Setmana",
-          day: "Dia", // change to your desired label
-          agenda: "Agenda", // change to your desired label
+          day: "Dia",
+          agenda: "Agenda",
         }}
       />
     </div>
