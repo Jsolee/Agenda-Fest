@@ -83,11 +83,11 @@
     {
         "id": 10,
         "title": "FM Sant Cugat Sesgarrigues",
-        "start": "2024-07-26T00:30:00",
-        "end": "2024-07-26T06:00:00",
+        "start": "2024-07-27T00:30:00",
+        "end": "2024-07-27T06:00:00",
         "location": "Sant Cugat Sesgarrigues",
-        "description": "FM grup de banda i despres DJ.",
-        "rating": 3
+        "description": "FM grup de banda i despres DJ Jonathan Gómez.",
+        "rating": 4
     },
     {
         "id": 11,
@@ -195,6 +195,33 @@
         "end": "2024-07-13T05:00:00",
         "location": "La Granada",
         "description": "FM concert Fugados de Alcatraz i despres DJ Chris Farom.",
+        "rating": 4
+    },
+    {
+        "id": 23,
+        "title": "FM Sant Jaume dels Domenys",
+        "start": "2024-07-24T00:30:00",
+        "end": "2024-07-24T05:00:00",
+        "location": "Sant Jaume dels Domenys",
+        "description": "FM concert de banda i despres DJ Jonathan Gómez.",
+        "rating": 4
+    },
+    {
+        "id": 24,
+        "title": "FM Igualada",
+        "start": "2024-08-24T00:30:00",
+        "end": "2024-08-24T05:00:00",
+        "location": "Igualada",
+        "description": "FM concert de banda i despres DJ Baat.",
+        "rating": 4
+    },
+    {
+        "id": 25,
+        "title": "FM Vilobí",
+        "start": "2024-08-23T00:30:00",
+        "end": "2024-08-23T05:00:00",
+        "location": "Vilobí del Penedes",
+        "description": "FM concert de banda i despres DJ Jonathan Gómez.",
         "rating": 4
     }
   ]
