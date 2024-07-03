@@ -128,10 +128,10 @@
     {
         "id": 15,
         "title": "FM Sant Martí Sarroca",
-        "start": "2024-07-13T00:30:00",
-        "end": "2024-07-13T06:00:00",
+        "start": "2024-07-19T00:30:00",
+        "end": "2024-07-19T06:00:00",
         "location": "Sant Martí Sarroca",
-        "description": "FM grup de banda i despres DJ (pendent de confirmacio data).",
+        "description": "FM grup de banda i despres DJ XDG (Xavi Diaz).",
         "rating": 3
     },
     {
@@ -160,6 +160,42 @@
         "location": "Vilafranca",
         "description": "FM grup de banda i despres DJ (pendent de confirmacio data).",
         "rating": 4
+    },
+    {
+        "id": 19,
+        "title": "ROYALE FM Vilafranca",
+        "start": "2024-08-29T00:30:00",
+        "end": "2024-08-29T06:00:00",
+        "location": "Vilafranca",
+        "description": "Nit de l'empalmada, organitzada per Royale/Altell i amb DJ ALCO.",
+        "rating": 5
+    },
+    {
+        "id": 20,
+        "title": "FM Sant Martí Sarroca",
+        "start": "2024-07-20T00:30:00",
+        "end": "2024-07-20T06:00:00",
+        "location": "Sant Martí Sarroca",
+        "description": "FM nit de la empalmada amb DJ XDG (Xavi Diaz).",
+        "rating": 4
+    },
+    {
+        "id": 21,
+        "title": "FM La Bleda",
+        "start": "2024-07-05T00:30:00",
+        "end": "2024-07-05T06:00:00",
+        "location": "La Bleda",
+        "description": "FM grup de banda i despres DJ (pendent de confirmacio data)..",
+        "rating": 3
+    },
+    {
+        "id": 22,
+        "title": "FM La Granada",
+        "start": "2024-07-13T00:30:00",
+        "end": "2024-07-13T06:00:00",
+        "location": "La Granada",
+        "description": "FM grup de banda i despres DJ (pendent de confirmacio data)..",
+        "rating": 3
     }
   ]
   
