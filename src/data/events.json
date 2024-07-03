@@ -185,17 +185,17 @@
         "start": "2024-07-05T00:30:00",
         "end": "2024-07-05T06:00:00",
         "location": "La Bleda",
-        "description": "FM grup de banda i despres DJ (pendent de confirmacio data)..",
+        "description": "FM grup de banda Popurris Band i despres nit jove amb les DJ PD Marla.",
         "rating": 3
     },
     {
         "id": 22,
         "title": "FM La Granada",
         "start": "2024-07-13T00:30:00",
-        "end": "2024-07-13T06:00:00",
+        "end": "2024-07-13T05:00:00",
         "location": "La Granada",
-        "description": "FM grup de banda i despres DJ (pendent de confirmacio data)..",
-        "rating": 3
+        "description": "FM concert Fugados de Alcatraz i despres DJ Chris Farom.",
+        "rating": 4
     }
   ]
   
