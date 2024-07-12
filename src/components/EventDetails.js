@@ -1,19 +1,12 @@
 import React from 'react';
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
 import './EventDetails.css';
 
 const EventDetails = ({ events }) => {
   if (!events || events.length === 0) {
     return <div className="event-details">Selecciona un dia per veure els events.</div>;
   }
-
-  // Function to display stars based on the rating
-  const displayRating = (rating) => {
-    let stars = [];
-    for (let i = 0; i < rating; i++) {
-      stars.push('⭐');
-    }
-    return stars.join('');
-  };
 
   // Sort events by rating in descending order
   const sortedEvents = [...events].sort((a, b) => b.rating - a.rating);
@@ -26,7 +19,10 @@ const EventDetails = ({ events }) => {
           <p><strong>Data:</strong> {new Date(event.start).toLocaleDateString()}</p>
           <p><strong>Ubicació:</strong> {event.location}</p>
           <p><strong>Descripció:</strong> {event.description}</p>
-          <p><strong>Puntuació:</strong> {displayRating(event.rating)}</p>
+          <p><strong>Puntuació:</strong></p>
+          <div className="rating-container">
+            <Rating name="half-rating-read" value={event.rating} precision={0.5} readOnly />
+          </div>
         </div>
       ))}
     </div>

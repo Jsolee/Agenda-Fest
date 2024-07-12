@@ -28,3 +28,8 @@
     color: var(--text-color);
   }
   
+  .rating-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

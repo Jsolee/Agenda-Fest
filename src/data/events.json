@@ -96,7 +96,7 @@
         "end": "2024-07-20T06:00:00",
         "location": "Santa Margarita i els Monjos",
         "description": "FM grup de banda i despres DJ (pendent de confirmacio data).",
-        "rating": 3
+        "rating": 2.5
     },
     {
         "id": 12,
@@ -105,7 +105,7 @@
         "end": "2024-08-03T06:00:00",
         "location": "La Llacuna",
         "description": "FM grup de banda i despres DJ (pendent de confirmacio data).",
-        "rating": 3
+        "rating": 2.5
     },
     {
         "id": 13,
@@ -114,7 +114,7 @@
         "end": "2024-08-17T06:00:00",
         "location": "Guardiola de Font-Rubi",
         "description": "FM grup de banda i despres DJ (pendent de confirmacio data).",
-        "rating": 4
+        "rating": 3.5
     },
     {
         "id": 14,
@@ -168,7 +168,7 @@
         "end": "2024-08-29T06:00:00",
         "location": "Vilafranca",
         "description": "Nit de l'empalmada, organitzada per Royale/Altell i amb DJ ALCO.",
-        "rating": 5
+        "rating": 4.5
     },
     {
         "id": 20,
