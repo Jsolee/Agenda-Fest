@@ -27,6 +27,7 @@ const App = () => {
       <h1>Agenda Fest</h1>
       <CalendarView events={events} onSelectEvent={setSelectedEvents} />
       <EventDetails events={selectedEvents} />
+      <Analytics />
     </div>
   );
 };
