@@ -95,7 +95,7 @@
         "start": "2024-07-20T00:30:00",
         "end": "2024-07-20T06:00:00",
         "location": "Santa Margarita i els Monjos",
-        "description": "FM grup de banda i despres DJ (pendent de confirmacio data).",
+        "description": "FM grup de banda i despres DJ.",
         "rating": 2.5
     },
     {
@@ -132,7 +132,7 @@
         "end": "2024-07-19T06:00:00",
         "location": "Sant Martí Sarroca",
         "description": "FM grup de banda i despres DJ XDG (Xavi Diaz).",
-        "rating": 3
+        "rating": 1.5
     },
     {
         "id": 16,
@@ -231,6 +231,15 @@
         "end": "2024-08-02T05:00:00",
         "location": "Ordal",
         "description": "La Gran Ordalada. Timbalada multitudinària i després DJ.",
+        "rating": 4
+    },
+    {
+        "id": 27,
+        "title": "FM Santa Margarita i els Monjos",
+        "start": "2024-07-19T00:30:00",
+        "end": "2024-07-19T06:00:00",
+        "location": "Santa Margarita i els Monjos",
+        "description": "Catarres i despres DJ.",
         "rating": 4
     }
   ]
