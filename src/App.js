@@ -3,6 +3,7 @@ import CalendarView from './components/CalendarView';
 import EventDetails from './components/EventDetails';
 import ThemeToggle from './components/ThemeToggle';
 import { getEvents } from './services/dataService';
+import { Analytics } from "@vercel/analytics/react"
 import './App.css';
 
 const App = () => {
