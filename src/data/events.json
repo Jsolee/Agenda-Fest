@@ -122,7 +122,7 @@
         "start": "2024-08-17T00:30:00",
         "end": "2024-08-17T06:00:00",
         "location": "Sant Quintí de Mediona",
-        "description": "FM grup de banda i despres DJ (pendent de confirmacio data).",
+        "description": "FM grup de banda i despres DJ.",
         "rating": 4
     },
     {
@@ -218,10 +218,10 @@
     {
         "id": 25,
         "title": "FM Vilobí",
-        "start": "2024-08-23T00:30:00",
-        "end": "2024-08-23T05:00:00",
+        "start": "2024-08-17T00:30:00",
+        "end": "2024-08-17T05:00:00",
         "location": "Vilobí del Penedes",
-        "description": "FM concert de banda i despres DJ Jonathan Gómez.",
+        "description": "FM concert de banda i despres SuperHits amb DJ Jonathan Gómez i DJ Xabo.",
         "rating": 4
     },
     {
@@ -241,6 +241,42 @@
         "location": "Santa Margarita i els Monjos",
         "description": "Catarres i despres DJ.",
         "rating": 4
+    },
+    {
+        "id": 28,
+        "title": "FM Vilobí",
+        "start": "2024-08-16T00:30:00",
+        "end": "2024-08-16T06:00:00",
+        "location": "Vilobí del Penedes",
+        "description": "Concert de banda i despres DJ.",
+        "rating": 5
+    },
+    {
+        "id": 29,
+        "title": "FM Sant Quintí de Mediona",
+        "start": "2024-08-16T00:30:00",
+        "end": "2024-08-16T06:00:00",
+        "location": "Sant Quintí de Mediona",
+        "description": "FM grup de banda i despres DJ.",
+        "rating": 4
+    },
+    {
+        "id": 30,
+        "title": "FM Sant Quintí de Mediona",
+        "start": "2024-08-19T00:30:00",
+        "end": "2024-08-19T06:00:00",
+        "location": "Sant Quintí de Mediona",
+        "description": "FM grup de banda i despres DJ.",
+        "rating": 4
+    },
+    {
+        "id": 31,
+        "title": "Macarella Superfresh",
+        "start": "2024-08-18T00:30:00",
+        "end": "2024-08-18T06:00:00",
+        "location": "Macarella Mediterranean Club",
+        "description": "Festa superfresh.",
+        "rating": 4.5
     }
   ]
   
